@@ -6,7 +6,7 @@
 ## Usage
 
 ```
-[lein-ragtime-gen "0.0.2"]
+[kwakbab/lein-ragtime-gen "0.0.1"]
 ```
 
 You need ...
@@ -26,7 +26,7 @@ mkdir project-root/resources/migrations
 (defproject project "1.0.0"
   :dependencies [[ragtime "0.5.0"]]
   ...
-  :plugins [[lein-ragtime-gen "0.0.2"]]
+  :plugins [[kwakbab/lein-ragtime-gen "0.0.1"]]
   ...
   :migration-path "resources/migrations")
 ```

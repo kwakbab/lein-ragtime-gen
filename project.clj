@@ -1,4 +1,4 @@
-(defproject lein-ragtime-gen "0.0.2"
+(defproject kwakbab/lein-ragtime-gen "0.0.1"
   :description "generating ragtime migration files"
   :url "https://github.com/kwakbab/lein-ragtime-gen"
   :license {:name "Eclipse Public License"
