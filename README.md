@@ -1,7 +1,7 @@
 # lein-ragtime-gen
 
-one of leiningen plugins
-generating ragtime migration files
+- one of leiningen plugins
+- generating ragtime migration files
 
 ## Usage
 
