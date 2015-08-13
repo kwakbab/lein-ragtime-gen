@@ -8,9 +8,8 @@
 
 (defn ragtime-gen
   [project & [migration-name]]
-  (println (:resource-paths project))
   (when (check-basic-settings project migration-name)
-    (let [file-dir (str (:root project) "/resources" (:migration-path project))
+    (let [file-dir (:migration-path project)
           dir? (.isDirectory (io/file file-dir))]
       (if dir?
         (let [file-name (give-a-name migration-name)]
@@ -18,7 +17,7 @@
             (do
               (.write w "{:up [\"\"] :down [\"\"]}")
               (println "generated" file-name))))
-        (println (format "$ mkdir project-root/resources/%s" (:migration-path project)))))))
+        (println (format "Hi. -> $ mkdir %s" (:migration-path project)))))))
 
 (defn- give-a-name [name]
   (format "%s-%s.edn" (unparse (formatter "yyyyMMddhhmmss") (now)) name))
