@@ -13,11 +13,11 @@
           dir? (.isDirectory (io/file file-dir))]
       (if dir?
         (let [file-name (give-a-name migration-name)
-              file-name-with-path (format "%s/%s" file-dir file-name)]
-          (with-open [w (io/writer file-name-with-path)]
+              file-path (format "%s/%s" file-dir file-name)]
+          (with-open [w (io/writer file-path)]
             (do
               (.write w "{:up [\"\"] :down [\"\"]}")
-              (println (str "generated ./" file-name-with-path)))))
+              (println "generated" file-path))))
         (println (format "Hi. -> $ mkdir %s" (:migration-path project)))))))
 
 (defn- give-a-name [name]
